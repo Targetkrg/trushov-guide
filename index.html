@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
+  <meta http-equiv="Pragma" content="no-cache">
+  <meta http-equiv="Expires" content="0">
+  <title>Гид по запуску курса | Максим Трушов</title>
+  <link rel="stylesheet" href="style.css?v=20261020_v9">
+</head>
+<body>
+
+  <div class="container">
+    
+    <!-- Главная шапка -->
+    <header class="header">
+      <div class="badge-status">
+        <span class="badge-dot"></span>
+        Подготовка курса к старту
+      </div>
+      <h1>Привет, Максим! 👋</h1>
+      <p class="subtitle">
+        Бот почти готов. Осталось три шага, около часа твоего времени, чтобы запустить продажи и выдачу курса.
+      </p>
+    </header>
+
+    <!-- ШАГ 0: Активация бота -->
+    <section class="card step-card step-0">
+      <div class="step-badge zero">ОБЯЗАТЕЛЬНЫЙ ШАГ 0</div>
+      <div class="card-title">
+        <span class="icon">🚀</span>
+        <span>Нажми Start у бота курса</span>
+      </div>
+      
+      <div class="explain-box">
+        <b>Зачем это нужно:</b><br>
+        Telegram устроен так, что бот <b>не может первым написать человеку</b>, пока человек сам не нажмёт кнопку <b>Start</b>. Без этого шага бот просто не сможет присылать тебе чеки учеников.
+      </div>
+
+      <div class="instruction-box">
+        <div class="inst-content" style="width: 100%;">
+          <a href="https://t.me/Photo_school_maksim_trushov_bot" target="_blank" class="btn-step-action highlight">
+            <span>🤖 Открыть бота @Photo_school_maksim_trushov_bot и нажать Start</span>
+            <span class="btn-step-arrow">↗</span>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ШАГ 1: Права администратора -->
+    <section class="card step-card">
+      <div class="step-badge">ШАГ 1 ИЗ 3</div>
+      <div class="card-title">
+        <span class="icon">👤</span>
+        <span>Подключи себя как администратора</span>
+      </div>
+      
+      <div class="explain-box">
+        <b>Что бот будет присылать тебе:</b>
+        <ul class="bullet-list">
+          <li>Чеки об оплате от учеников с кнопками «Подтвердить» и «Отклонить»</li>
+          <li>Уведомления о новых учениках, начавших бесплатный урок</li>
+          <li>Уведомления о сданных домашних заданиях</li>
+        </ul>
+      </div>
+
+      <div class="instruction-box">
+        <div class="inst-num">1</div>
+        <div class="inst-content">
+          <b>Узнай свой цифровой Telegram ID</b>
+          <p>Нажми кнопку ниже — откроется официальный служебный бот в Telegram. Нажми в нём <b>Start</b> и скопируй свои цифры ID.</p>
+          <a href="https://t.me/userinfobot" target="_blank" class="btn-step-action">
+            <span>🆔 Узнать свой цифровой ID через @userinfobot</span>
+            <span class="btn-step-arrow">↗</span>
+          </a>
+        </div>
+      </div>
+
+      <div class="instruction-box">
+        <div class="inst-num">2</div>
+        <div class="inst-content">
+          <b>Вставь свой номер ID сюда:</b>
+          <input type="text" id="admin_id" class="form-input" placeholder="Например: 1174367507" inputmode="numeric">
+          <div class="input-hint">Число из 9-10 цифр (без букв и знаков). Бот сразу сделает тебя администратором!</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ШАГ 2: Цена, Kaspi и условия -->
+    <section class="card step-card">
+      <div class="step-badge">ШАГ 2 ИЗ 3</div>
+      <div class="card-title">
+        <span class="icon">💳</span>
+        <span>Стоимость, реквизиты и правила</span>
+      </div>
+
+      <div class="explain-box">
+        <b>Как устроена оплата:</b><br>
+        После бесплатного урока бот показывает ученику описание курса, цену и даёт твою ссылку на Kaspi. Ученик переводит оплату и присылает скриншот чека в чат.
+        <div style="margin-top: 8px; color: var(--accent-gold); font-weight: 600;">
+          ⚠️ Важно: когда придёт чек, обязательно проверь в приложении Kaspi, что деньги реально поступили на счёт, и только потом нажимай «Подтвердить».
+        </div>
+      </div>
+
+      <div class="form-group">
+        <label class="form-label">Название курса:</label>
+        <input type="text" id="course_title" class="form-input" value="Детская фотография на телефон">
+      </div>
+
+      <div class="form-group">
+        <label class="form-label">Стоимость курса:</label>
+        <input type="text" id="course_price" class="form-input" value="15 000 ₸">
+        <div class="input-hint">Эту сумму бот будет называть ученикам в сообщении об оплате.</div>
+      </div>
+
+      <div class="form-group">
+        <label class="form-label">Ссылка на оплату в Kaspi Pay:</label>
+        <input type="text" id="kaspi_link" class="form-input" value="https://pay.kaspi.kz/pay/xhtzbpj4">
+        <div class="input-hint">Ссылка из твоего Kaspi Pay для приёма платежей.</div>
+      </div>
+
+      <div class="form-group">
+        <label class="form-label">На кого оформлена оплата (для оферты):</label>
+        <input type="text" id="legal_owner" class="form-input" placeholder="Например: ИП Трушов М. В.">
+        <div class="input-hint">ФИО, ИП или статус самозанятого.</div>
+      </div>
+
+      <div class="form-group">
+        <label class="form-label">Срок доступа к курсу:</label>
+        <select id="access_duration" class="form-select">
+          <option value="6 месяцев" selected>6 месяцев со дня оплаты</option>
+          <option value="1 год">1 год со дня оплаты</option>
+          <option value="Бессрочно">Бессрочно (навсегда)</option>
+        </select>
+      </div>
+
+      <div class="form-group">
+        <label class="form-label">Контакт для вопросов учеников:</label>
+        <input type="text" id="support_contact" class="form-input" placeholder="Например: @trushov_photo">
+        <div class="input-hint">Твой Telegram-юзернейм, его бот покажет ученикам по команде /help.</div>
+      </div>
+
+      <div class="form-group">
+        <label class="form-label">Условия возврата денег:</label>
+        <input type="text" id="refund_policy" class="form-input" value="100% возврат в первые 3 дня, если курс не подошёл">
+        <div class="input-hint">Короткое понятное правило для учеников.</div>
+      </div>
+
+      <div class="form-group">
+        <label class="form-label">Чему научатся ученики (3-5 пунктов программы):</label>
+        <div class="input-hint" style="margin-bottom: 8px;">
+          Эти пункты бот будет показывать ученикам перед оплатой:
+        </div>
+        <div id="benefits_list">
+          <input type="text" class="form-input benefit-input" value="Снимать ребёнка так, чтобы фото были мягкими и тёплыми, а не тёмными и размытыми" style="margin-bottom: 8px;">
+          <input type="text" class="form-input benefit-input" value="Ловить искренние эмоции детей в игре без команды «улыбнись»" style="margin-bottom: 8px;">
+          <input type="text" class="form-input benefit-input" value="Видеть правильный естественный свет от окна дома и на прогулке" style="margin-bottom: 8px;">
+          <input type="text" class="form-input benefit-input" value="Делать чистую быструю обработку прямо на телефоне за 2 минуты">
+        </div>
+      </div>
+    </section>
+
+    <!-- КНОПКА СОХРАНЕНИЯ НАСТРОЕК -->
+    <div style="padding: 10px 0 25px 0;">
+      <button class="btn-submit" id="save_btn" onclick="saveSettingsToServer()">
+        <span>💾 Сохранить и применить настройки в боте</span>
+      </button>
+      <div style="text-align: center; font-size: 13px; color: var(--text-muted); margin-top: 10px;">
+        Данные сразу запишутся на сервер, бот обновится и подключит тебя как администратора. Никому ничего пересылать не нужно!
+      </div>
+    </div>
+
+    <!-- ШАГ 3: Загрузка видеоуроков -->
+    <section class="card step-card">
+      <div class="step-badge">ШАГ 3 ИЗ 3</div>
+      <div class="card-title">
+        <span class="icon">🎬</span>
+        <span>Как загрузить видео уроков в канал «База»</span>
+      </div>
+
+      <div class="explain-box highlight">
+        <b>💡 Почему видео хранятся в Telegram:</b>
+        <p style="margin-top: 6px;">
+          Все уроки весят несколько гигабайт. Telegram хранит видео <b>бесплатно</b> и моментально открывает их на смартфонах. А наш бот <b>закрывает пересылку и сохранение видео</b> ученикам.
+        </p>
+      </div>
+
+      <div class="instruction-box" style="margin-bottom: 16px;">
+        <div class="inst-content" style="width: 100%;">
+          <b>Канал-склад уроков:</b>
+          <p style="margin-top: 4px; margin-bottom: 10px;">Сюда загружаются все видео курса:</p>
+          <a href="https://t.me/c/3967996152/1" target="_blank" class="btn-step-action">
+            <span>📁 Открыть закрытый канал «База» в Telegram</span>
+            <span class="btn-step-arrow">↗</span>
+          </a>
+        </div>
+      </div>
+
+      <!-- Пошаговая инструкция: Как загрузить один урок -->
+      <div class="instruction-box" style="flex-direction: column; gap: 8px; margin-bottom: 16px;">
+        <b style="font-size: 16px; color: var(--accent-gold);">Как загрузить один урок</b>
+        <ol style="padding-left: 20px; line-height: 1.6; color: var(--text-primary); margin-top: 6px;">
+          <li style="margin-bottom: 8px;">Откройте канал «База» и нажмите на скрепку 📎.</li>
+          <li style="margin-bottom: 8px;">Выберите видео урока. <b>Именно видео, не файл.</b></li>
+          <li style="margin-bottom: 8px;">Перед отправкой под видео появится поле <b>«Добавить подпись»</b>. Вставьте туда скопированный текст: название, описание и задание.</li>
+          <li style="margin-bottom: 8px;">Нажмите <b>«Отправить»</b>.</li>
+          <li style="margin-bottom: 8px;">Через несколько секунд бот напишет вам: <i>«Добавлен урок N»</i>. Если сообщения нет, значит, подпись попала не в то место.</li>
+        </ol>
+
+        <div style="margin-top: 10px; padding: 12px; background: rgba(239, 68, 68, 0.12); border: 1px solid rgba(239, 68, 68, 0.35); border-radius: var(--radius-sm); font-size: 13.5px; color: #fca5a5; line-height: 1.5;">
+          <b>Важно:</b> подпись должна быть <b>в том же сообщении, что и видео</b>. Если написать текст отдельным сообщением, бот его не увидит, и урок уйдёт ученику без названия и задания. <b>Одно видео в одном сообщении, не альбомом.</b>
+        </div>
+      </div>
+
+      <!-- Формат, который понимает бот -->
+      <div class="instruction-box" style="flex-direction: column; gap: 6px; margin-bottom: 16px;">
+        <b style="font-size: 15px; color: var(--text-primary);">Формат подписи (строго 4 части):</b>
+        <p style="color: var(--text-secondary); margin-top: 4px; line-height: 1.5;">
+          Бот автоматически разбирает подпись к видео по ключевым словам. Номер урока определяется тегом в первой строке (<code>#пробный</code>, <code>#урок1</code>, <code>#урок2</code>...). Порядок отправки в канал не важен:
+        </p>
+        <ul class="bullet-list" style="margin-top: 6px;">
+          <li><b>Первая строка:</b> только тег <code>#пробный</code> (для бесплатного урока) или <code>#урокN</code> (для платных: <code>#урок1</code>, <code>#урок2</code>...)</li>
+          <li><b>Вторая строка:</b> <code>Название: ...</code> (краткая тема)</li>
+          <li><b>Третья строка:</b> <code>Описание: ...</code> (2-3 предложения сути)</li>
+          <li><b>Четвёртая строка:</b> <code>Задание: ...</code> (чёткие шаги, что сделать и прислать)</li>
+        </ul>
+      </div>
+
+      <!-- Образец подписи (Пример, замени своим) -->
+      <div class="sample-box">
+        <div class="sample-tag">ОБРАЗЕЦ ПОДПИСИ (ПРИМЕР, ЗАМЕНИ СВОИМ)</div>
+        <pre class="code-preview" id="sample_trial_caption">#пробный
+Название: Свет из окна: секрет тёплого детского фото
+Описание: Короткий урок для тех, кто ни разу не учился фотографировать. Вы узнаете, где в квартире лучший свет для снимков ребёнка и как держать телефон, чтобы кадр получился мягким и тёплым. Нужен только телефон. Видео около 8 минут.
+Задание: Сделайте 3 кадра ребёнка у окна днём.
+1. Поставьте ребёнка боком к окну, чтобы свет падал на лицо с одной стороны. Лампы выключите.
+2. Встаньте в 1-2 шагах, телефон держите на уровне его глаз.
+3. Снимайте, пока он играет или смотрит в окно.
+Пришлите сюда лучший кадр. Он не обязан быть идеальным.</pre>
+        <button type="button" class="btn-copy" onclick="copySnippet('sample_trial_caption', this)">
+          <span>📋 Скопировать образец подписи</span>
+        </button>
+      </div>
+
+      <!-- Шаблон для остальных уроков -->
+      <div class="sample-box" style="margin-top: 14px;">
+        <div class="sample-tag">ШАБЛОН ДЛЯ ОСТАЛЬНЫХ УРОКОВ</div>
+        <div style="font-size: 13.5px; font-weight: 600; color: var(--accent-gold); margin-bottom: 8px;">
+          ⚠️ Подпись всегда вставляется под видео при отправке.
+        </div>
+        <div style="font-size: 13px; color: var(--text-secondary); margin-bottom: 10px;">
+          Для каждого следующего урока меняйте номер в теге (<code>#урок1</code>, <code>#урок2</code>, <code>#урок3</code>...):
+        </div>
+        <pre class="code-preview" id="blank_template_caption">#урок1
+Название: (о результате, до 60 знаков)
+Описание: (2-3 предложения: для кого, чему научитесь, что нужно, сколько длится)
+Задание: (сколько кадров, где, 2-4 шага, что прислать)</pre>
+        <button type="button" class="btn-copy" onclick="copySnippet('blank_template_caption', this)">
+          <span>📋 Скопировать пустой шаблон урока</span>
+        </button>
+      </div>
+
+      <div class="explain-box" style="margin-top: 16px;">
+        <b>Как бот отправляет это ученику:</b><br>
+        1. Сначала текстовое сообщение с Названием и Описанием.<br>
+        2. Затем защищённое видео (служебные теги <code>#урокN</code> бот скрывает сам).<br>
+        3. Затем отдельным сообщением — чёткое Задание для сдачи домашней работы.
+      </div>
+    </section>
+
+    <!-- ШАГ 4: Финальный тест -->
+    <section class="card step-card">
+      <div class="step-badge">ШАГ 4: ФИНАЛЬНЫЙ ТЕСТ</div>
+      <div class="card-title">
+        <span class="icon">🧪</span>
+        <span>Пройди путь ученика сам</span>
+      </div>
+
+      <div class="explain-box">
+        После того как загрузишь хотя бы бесплатный урок и урок №1:
+        <ul class="bullet-list">
+          <li>Открой бота <a href="https://t.me/Photo_school_maksim_trushov_bot" target="_blank" class="inline-link">🤖 @Photo_school_maksim_trushov_bot</a> со второго аккаунта или попроси близкого человека</li>
+          <li>Пройди бесплатный урок от нажатия кнопки до сдачи первого кадра</li>
+          <li>Убедись, что тебе как админу пришло уведомление о домашке!</li>
+        </ul>
+      </div>
+    </section>
+
+  </div>
+
+  <!-- Модальное окно успешного применения -->
+  <div class="modal-overlay" id="successModal">
+    <div class="modal-content">
+      <div class="modal-icon">✅</div>
+      <div class="modal-title" id="modal_title">Настройки успешно применены! 🎉</div>
+      <div class="modal-text" id="modal_text">
+        Все реквизиты, цена и права администратора активированы прямо сейчас. Никому ничего пересылать не нужно!
+      </div>
+      
+      <a id="modal_channel_btn" href="https://t.me/c/3967996152/1" target="_blank" class="modal-btn" style="margin-bottom: 12px;">
+        📁 Открыть канал «База» и загрузить уроки ➔
+      </a>
+      <button class="modal-btn-secondary" onclick="closeModal()">Закрыть</button>
+    </div>
+  </div>
+
+  <!-- Всплывающая плашка копирования -->
+  <div class="toast" id="toast">Скопировано в буфер обмена!</div>
+
+  <script src="app.js?v=20261020_v8"></script>
+</body>
+</html>
